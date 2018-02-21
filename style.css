@@ -1,3 +1,8 @@
+.sheet-header {
+    background: url(https://i.imgur.com/7zOqeM6.png) no-repeat 90% 50%;
+    min-height: 185px;
+}
+
 .sheet-Wound {
     width: 100px;
 }
@@ -11,23 +16,23 @@
 }
 .sheet-joy {
     border-color: #FBD676;
-    background: #FCE9B7;
+    background: #FCE9B7 url(https://i.imgur.com/UAdHPJx.png) no-repeat 90% 50%;
 }
 .sheet-love {
     border-color: #ACD59D;
-    background: #D3E8CB;
+    background: #D3E8CB url(https://i.imgur.com/BL0Ft7i.png) no-repeat 90% 50%;
 }
 .sheet-grief {
     border-color: #97C5E9;
-    background: #C9E0F3;
+    background: #C9E0F3 url(https://i.imgur.com/EM0MOLn.png) no-repeat 90% 50%;
 }
 .sheet-fear {
     border-color: #A697C7;
-    background: #CDC6E0;
+    background: #CDC6E0 url(https://i.imgur.com/AudRc9v.png) no-repeat 90% 50%;
 }
 .sheet-anger {
     border-color: #ED7A82;
-    background: #F6B9B8;
+    background: #F6B9B8 url(https://i.imgur.com/rc1qs05.png) no-repeat 90% 50%;
 }
 
 .sheet-Calling {
@@ -41,6 +46,7 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    background-image: none !important;
 }
 select {
     width: 100px;
@@ -71,6 +77,7 @@ select {
     border-width: 2px;
     border-style: solid;
     border-radius: 5px;
+    background-image: none !important;
 }
 
 .sheet-joy:hover input ~ .sheet-checkmark, .sheet-joy input:checked ~ .sheet-checkmark {
