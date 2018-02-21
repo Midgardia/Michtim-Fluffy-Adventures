@@ -1,0 +1,314 @@
+<p class="sheet-char"><label name="attr_Name">Name <input type="text" name="attr_Name" value="" /></label></p>
+<p class="sheet-char"><label name="attr_BodyType">Body Type
+<select name="attr_BodyType">
+    <option value="Small">Small</option>
+    <option value="Wiry">Wiry</option>
+    <option value="Strong">Strong</option>
+</select></label></p>
+
+<div class='sheet-3colrow'>
+    <div class='sheet-col sheet-emo'>
+        <!-- Put the content for the first column here -->
+        <p class="sheet-skill sheet-joy"><label name="attr_Joy">Joy</label> <input type="number" name="attr_Joy" value="1" /> <button type='roll' value='&{template:default} {{name=@{Name}}} {{Joy Roll= [[[[@{Joy}-?{Hold}]]d6+?{Mood|0}]]}}{{Successes=[[1+?{Hold}]]}}' name='roll_Joy'></button></p>
+        <p class="sheet-skill sheet-love"><label name="attr_Love">Love</label> <input type="number" name="attr_Love" value="1" /> <button type='roll' value='&{template:default} {{name=@{Name}}} {{Love Roll= [[[[@{Love}-?{Hold}]]d6+?{Mood|0}]]}}{{Successes=[[1+?{Hold}]]}}' name='roll_Love'></button></p>
+        <p class="sheet-skill sheet-grief"><label name="attr_Grief">Grief</label> <input type="number" name="attr_Grief" value="1" /> <button type='roll' value='&{template:default} {{name=@{Name}}} {{Grief Roll= [[[[@{Grief}-?{Hold}]]d6+?{Mood|0}]]}}{{Successes=[[1+?{Hold}]]}}' name='roll_Grief'></button></p>
+        <p class="sheet-skill sheet-fear"><label name="attr_Fear">Fear</label> <input type="number" name="attr_Fear" value="1" /> <button type='roll' value='&{template:default} {{name=@{Name}}} {{Fear Roll= [[[[@{Fear}-?{Hold}]]d6+?{Mood|0}]]}}{{Successes=[[1+?{Hold}]]}}' name='roll_Fear'></button></p>
+        <p class="sheet-skill sheet-anger"><label name="attr_Anger">Anger</label> <input type="number" name="attr_Anger" value="1" /> <button type='roll' value='&{template:default} {{name=@{Name}}} {{Anger Roll= [[[[@{Anger}-?{Hold}]]d6+?{Mood|0}]]}}{{Successes=[[1+?{Hold}]]}}' name='roll_Anger'></button></p>
+    </div>
+    <div class='sheet-col'>
+        <!-- Second column -->
+        <p><label>Total Health</label> <input type="number" name="attr_Wounds" value="(@{Wounds_Max}-@{Wound1lvl}-@{Wound2lvl}-@{Wound3lvl}-@{Wound4lvl}-@{Wound5lvl}-@{Wound6lvl}-@{Wound7lvl})" disabled="true"  />/<input type="number" name="attr_Wounds_max" value="7" /></p>
+        <p><label>Wound Tracker</label></p>
+        <p><select name="attr_Wound1" class="sheet-Wound">
+            <option value="Normal" selected>Normal</option>
+            <option value="Blinding">Blinding</option>
+            <option value="Cruel">Cruel</option>
+            <option value="Slowing">Slowing</option>
+            <option value="Worsening">Worsening</option>
+        </select> <input type="radio" value="0" selected name="attr_Wound1lvl"><input type='radio' value='1' name='attr_Wound1lvl' /><input type='radio' value='2' name='attr_Wound1lvl' /><input type='radio' value='3' name='attr_Wound1lvl' /><input type='radio' value='4' name='attr_Wound1lvl'/></p>
+        <p><select name="attr_Wound2" class="sheet-Wound">
+            <option value="Normal" selected>Normal</option>
+            <option value="Blinding">Blinding</option>
+            <option value="Cruel">Cruel</option>
+            <option value="Slowing">Slowing</option>
+            <option value="Worsening">Worsening</option>
+        </select> <input type="radio" value="0" selected name="attr_Wound2lvl"><input type='radio' value='1' name='attr_Wound2lvl' /><input type='radio' value='2' name='attr_Wound2lvl' /><input type='radio' value='3' name='attr_Wound2lvl' /><input type='radio' value='4' name='attr_Wound2lvl'/></p>
+        <p><select name="attr_Wound3" class="sheet-Wound">
+            <option value="Normal" selected>Normal</option>
+            <option value="Blinding">Blinding</option>
+            <option value="Cruel">Cruel</option>
+            <option value="Slowing">Slowing</option>
+            <option value="Worsening">Worsening</option>
+        </select>  <input type="radio" value="0" selected name="attr_Wound3lvl"><input type='radio' value='1' name='attr_Wound3lvl' /><input type='radio' value='2' name='attr_Wound3lvl' /><input type='radio' value='3' name='attr_Wound3lvl' /><input type='radio' value='4' name='attr_Wound3lvl'/></p>
+        <p><select name="attr_Wound4" class="sheet-Wound">
+            <option value="Normal" selected>Normal</option>
+            <option value="Blinding">Blinding</option>
+            <option value="Cruel">Cruel</option>
+            <option value="Slowing">Slowing</option>
+            <option value="Worsening">Worsening</option>
+        </select>  <input type="radio" value="0" selected name="attr_Wound4lvl"><input type='radio' value='1' name='attr_Wound4lvl' /><input type='radio' value='2' name='attr_Wound4lvl' /><input type='radio' value='3' name='attr_Wound4lvl' /><input type='radio' value='4' name='attr_Wound4lvl'/></p>
+        <p><select name="attr_Wound5" class="sheet-Wound">
+            <option value="Normal" selected>Normal</option>
+            <option value="Blinding">Blinding</option>
+            <option value="Cruel">Cruel</option>
+            <option value="Slowing">Slowing</option>
+            <option value="Worsening">Worsening</option>
+        </select>  <input type="radio" value="0" selected name="attr_Wound5lvl"><input type='radio' value='1' name='attr_Wound5lvl' /><input type='radio' value='2' name='attr_Wound5lvl' /><input type='radio' value='3' name='attr_Wound5lvl' /><input type='radio' value='4' name='attr_Wound5lvl'/></p>
+        <p><select name="attr_Wound6" class="sheet-Wound">
+            <option value="Normal" selected>Normal</option>
+            <option value="Blinding">Blinding</option>
+            <option value="Cruel">Cruel</option>
+            <option value="Slowing">Slowing</option>
+            <option value="Worsening">Worsening</option>
+        </select>  <input type="radio" value="0" selected name="attr_Wound6lvl"><input type='radio' value='1' name='attr_Wound6lvl' /><input type='radio' value='2' name='attr_Wound6lvl' /><input type='radio' value='3' name='attr_Wound6lvl' /><input type='radio' value='4' name='attr_Wound6lvl'/></p>
+        <p><select name="attr_Wound7" class="sheet-Wound">
+            <option value="Normal" selected>Normal</option>
+            <option value="Blinding">Blinding</option>
+            <option value="Cruel">Cruel</option>
+            <option value="Slowing">Slowing</option>
+            <option value="Worsening">Worsening</option>
+        </select>  <input type="radio" value="0" selected name="attr_Wound7lvl"><input type='radio' value='1' name='attr_Wound7lvl' /><input type='radio' value='2' name='attr_Wound7lvl' /><input type='radio' value='3' name='attr_Wound7lvl' /><input type='radio' value='4' name='attr_Wound7lvl'/></p>
+    </div>
+    <div class='sheet-col'>
+        <!-- Third column -->
+        <p class="sheet-callings"><label>Callings</label></p>
+        <p>
+        <label class="sheet-Calling sheet-active">
+            <input type="checkbox" class="sheet-active" name="attr_Calling1Active" value="Yes"><span class="sheet-checkmark sheet-active"></span>
+        </label>
+        <select name="attr_Calling1" class="sheet-CallingList">
+            <option value=""></option>
+            <option value="Adventurer">Adventurer</option>
+            <option value="Artist">Artist</option>
+            <option value="Bard">Bard</option>
+            <option value="Cook">Cook</option>
+            <option value="Courtier">Courtier</option>
+            <option value="Cybertooth">Cybertooth</option>
+            <option value="Daredevil">Daredevil</option>
+            <option value="Frostpaw">Frostpaw</option>
+            <option value="Machinist">Machinist</option>
+            <option value="Sorcerer">Sorcerer</option>
+            <option value="Tactician">Tactician</option>
+            <option value="Witch">Witch</option>
+        </select> 
+        <label class="sheet-Calling sheet-joy">
+            <input type="checkbox" name="attr_Calling1joy" value="Trained" class="sheet-CallingJoy"><span class="sheet-checkmark sheet-joy"></span>
+        </label>
+        <label class="sheet-Calling sheet-love">
+            <input type="checkbox" name="attr_Calling1love" value="Trained" class="sheet-CallingLove"><span class="sheet-checkmark sheet-love"></span>
+        </label>
+        <label class="sheet-Calling sheet-grief">
+            <input type="checkbox" name="attr_Calling1grief" value="Trained" class="sheet-CallingGrief"><span class="sheet-checkmark sheet-grief"></span>
+        </label>
+        <label class="sheet-Calling sheet-fear">
+            <input type="checkbox" name="attr_Calling1fear" value="Trained" class="sheet-CallingFear"><span class="sheet-checkmark sheet-fear"></span>
+        </label>
+        <label class="sheet-Calling sheet-anger">
+            <input type="checkbox" name="attr_Calling1anger" value="Trained" class="sheet-CallingAnger"><span class="sheet-checkmark sheet-anger"></span>
+        </label></p>
+        <p>
+        <label class="sheet-Calling sheet-active">
+            <input type="checkbox" class="sheet-active" name="attr_Calling2Active" value="Yes"><span class="sheet-checkmark sheet-active"></span>
+        </label>
+        <select name="attr_Calling2" class="sheet-CallingList">
+            <option value=""></option>
+            <option value="Adventurer">Adventurer</option>
+            <option value="Artist">Artist</option>
+            <option value="Bard">Bard</option>
+            <option value="Cook">Cook</option>
+            <option value="Courtier">Courtier</option>
+            <option value="Cybertooth">Cybertooth</option>
+            <option value="Daredevil">Daredevil</option>
+            <option value="Frostpaw">Frostpaw</option>
+            <option value="Machinist">Machinist</option>
+            <option value="Sorcerer">Sorcerer</option>
+            <option value="Tactician">Tactician</option>
+            <option value="Witch">Witch</option>
+        </select> 
+        <label class="sheet-Calling sheet-joy">
+            <input type="checkbox" name="attr_Calling2joy" value="Trained" class="sheet-CallingJoy"><span class="sheet-checkmark sheet-joy"></span>
+        </label>
+        <label class="sheet-Calling sheet-love">
+            <input type="checkbox" name="attr_Calling2love" value="Trained" class="sheet-CallingLove"><span class="sheet-checkmark sheet-love"></span>
+        </label>
+        <label class="sheet-Calling sheet-grief">
+            <input type="checkbox" name="attr_Calling2grief" value="Trained" class="sheet-CallingGrief"><span class="sheet-checkmark sheet-grief"></span>
+        </label>
+        <label class="sheet-Calling sheet-fear">
+            <input type="checkbox" name="attr_Calling2fear" value="Trained" class="sheet-CallingFear"><span class="sheet-checkmark sheet-fear"></span>
+        </label>
+        <label class="sheet-Calling sheet-anger">
+            <input type="checkbox" name="attr_Calling2anger" value="Trained" class="sheet-CallingAnger"><span class="sheet-checkmark sheet-anger"></span>
+        </label></p>
+        <p>
+        <label class="sheet-Calling sheet-active">
+            <input type="checkbox" class="sheet-active" name="attr_Calling3Active" value="Yes"><span class="sheet-checkmark sheet-active"></span>
+        </label>
+        <select name="attr_Calling3" class="sheet-CallingList">
+            <option value=""></option>
+            <option value="Adventurer">Adventurer</option>
+            <option value="Artist">Artist</option>
+            <option value="Bard">Bard</option>
+            <option value="Cook">Cook</option>
+            <option value="Courtier">Courtier</option>
+            <option value="Cybertooth">Cybertooth</option>
+            <option value="Daredevil">Daredevil</option>
+            <option value="Frostpaw">Frostpaw</option>
+            <option value="Machinist">Machinist</option>
+            <option value="Sorcerer">Sorcerer</option>
+            <option value="Tactician">Tactician</option>
+            <option value="Witch">Witch</option>
+        </select> 
+        <label class="sheet-Calling sheet-joy">
+            <input type="checkbox" name="attr_Calling3joy" value="Trained" class="sheet-CallingJoy"><span class="sheet-checkmark sheet-joy"></span>
+        </label>
+        <label class="sheet-Calling sheet-love">
+            <input type="checkbox" name="attr_Calling3love" value="Trained" class="sheet-CallingLove"><span class="sheet-checkmark sheet-love"></span>
+        </label>
+        <label class="sheet-Calling sheet-grief">
+            <input type="checkbox" name="attr_Calling3grief" value="Trained" class="sheet-CallingGrief"><span class="sheet-checkmark sheet-grief"></span>
+        </label>
+        <label class="sheet-Calling sheet-fear">
+            <input type="checkbox" name="attr_Calling3fear" value="Trained" class="sheet-CallingFear"><span class="sheet-checkmark sheet-fear"></span>
+        </label>
+        <label class="sheet-Calling sheet-anger">
+            <input type="checkbox" name="attr_Calling3anger" value="Trained" class="sheet-CallingAnger"><span class="sheet-checkmark sheet-anger"></span>
+        </label></p>
+        <p>
+        <label class="sheet-Calling sheet-active">
+            <input type="checkbox" class="sheet-active" name="attr_Calling4Active" value="Yes"><span class="sheet-checkmark sheet-active"></span>
+        </label>
+        <select name="attr_Calling4" class="sheet-CallingList">
+            <option value=""></option>
+            <option value="Adventurer">Adventurer</option>
+            <option value="Artist">Artist</option>
+            <option value="Bard">Bard</option>
+            <option value="Cook">Cook</option>
+            <option value="Courtier">Courtier</option>
+            <option value="Cybertooth">Cybertooth</option>
+            <option value="Daredevil">Daredevil</option>
+            <option value="Frostpaw">Frostpaw</option>
+            <option value="Machinist">Machinist</option>
+            <option value="Sorcerer">Sorcerer</option>
+            <option value="Tactician">Tactician</option>
+            <option value="Witch">Witch</option>
+        </select> 
+        <label class="sheet-Calling sheet-joy">
+            <input type="checkbox" name="attr_Calling4joy" value="Trained" class="sheet-CallingJoy"><span class="sheet-checkmark sheet-joy"></span>
+        </label>
+        <label class="sheet-Calling sheet-love">
+            <input type="checkbox" name="attr_Calling4love" value="Trained" class="sheet-CallingLove"><span class="sheet-checkmark sheet-love"></span>
+        </label>
+        <label class="sheet-Calling sheet-grief">
+            <input type="checkbox" name="attr_Calling4grief" value="Trained" class="sheet-CallingGrief"><span class="sheet-checkmark sheet-grief"></span>
+        </label>
+        <label class="sheet-Calling sheet-fear">
+            <input type="checkbox" name="attr_Calling4fear" value="Trained" class="sheet-CallingFear"><span class="sheet-checkmark sheet-fear"></span>
+        </label>
+        <label class="sheet-Calling sheet-anger">
+            <input type="checkbox" name="attr_Calling4anger" value="Trained" class="sheet-CallingAnger"><span class="sheet-checkmark sheet-anger"></span>
+        </label></p>
+        <p>
+        <label class="sheet-Calling sheet-active">
+            <input type="checkbox" class="sheet-active"  name="attr_Calling5Active" value="Yes"><span class="sheet-checkmark sheet-active"></span>
+        </label>
+        <select name="attr_Calling5" class="sheet-CallingList">
+            <option value=""></option>
+            <option value="Adventurer">Adventurer</option>
+            <option value="Artist">Artist</option>
+            <option value="Bard">Bard</option>
+            <option value="Cook">Cook</option>
+            <option value="Courtier">Courtier</option>
+            <option value="Cybertooth">Cybertooth</option>
+            <option value="Daredevil">Daredevil</option>
+            <option value="Frostpaw">Frostpaw</option>
+            <option value="Machinist">Machinist</option>
+            <option value="Sorcerer">Sorcerer</option>
+            <option value="Tactician">Tactician</option>
+            <option value="Witch">Witch</option>
+        </select> 
+        <label class="sheet-Calling sheet-joy">
+            <input type="checkbox" name="attr_Calling5joy" value="Trained" class="sheet-CallingJoy"><span class="sheet-checkmark sheet-joy"></span>
+        </label>
+        <label class="sheet-Calling sheet-love">
+            <input type="checkbox" name="attr_Calling5love" value="Trained" class="sheet-CallingLove"><span class="sheet-checkmark sheet-love"></span>
+        </label>
+        <label class="sheet-Calling sheet-grief">
+            <input type="checkbox" name="attr_Calling5grief" value="Trained" class="sheet-CallingGrief"><span class="sheet-checkmark sheet-grief"></span>
+        </label>
+        <label class="sheet-Calling sheet-fear">
+            <input type="checkbox" name="attr_Calling5fear" value="Trained" class="sheet-CallingFear"><span class="sheet-checkmark sheet-fear"></span>
+        </label>
+        <label class="sheet-Calling sheet-anger">
+            <input type="checkbox" name="attr_Calling5anger" value="Trained" class="sheet-CallingAnger"><span class="sheet-checkmark sheet-anger"></span>
+        </label></p>
+        <p>
+        <label class="sheet-Calling sheet-active">
+            <input type="checkbox" class="sheet-active" name="attr_Calling6Active" value="Yes"><span class="sheet-checkmark sheet-active"></span>
+        </label>
+        <select name="attr_Calling6" class="sheet-CallingList">
+            <option value=""></option>
+            <option value="Adventurer">Adventurer</option>
+            <option value="Artist">Artist</option>
+            <option value="Bard">Bard</option>
+            <option value="Cook">Cook</option>
+            <option value="Courtier">Courtier</option>
+            <option value="Cybertooth">Cybertooth</option>
+            <option value="Daredevil">Daredevil</option>
+            <option value="Frostpaw">Frostpaw</option>
+            <option value="Machinist">Machinist</option>
+            <option value="Sorcerer">Sorcerer</option>
+            <option value="Tactician">Tactician</option>
+            <option value="Witch">Witch</option>
+        </select> 
+        <label class="sheet-Calling sheet-joy">
+            <input type="checkbox" name="attr_Calling6joy" value="Trained" class="sheet-CallingJoy"><span class="sheet-checkmark sheet-joy"></span>
+        </label>
+        <label class="sheet-Calling sheet-love">
+            <input type="checkbox" name="attr_Calling6love" value="Trained" class="sheet-CallingLove"><span class="sheet-checkmark sheet-love"></span>
+        </label>
+        <label class="sheet-Calling sheet-grief">
+            <input type="checkbox" name="attr_Calling6grief" value="Trained" class="sheet-CallingGrief"><span class="sheet-checkmark sheet-grief"></span>
+        </label>
+        <label class="sheet-Calling sheet-fear">
+            <input type="checkbox" name="attr_Calling6fear" value="Trained" class="sheet-CallingFear"><span class="sheet-checkmark sheet-fear"></span>
+        </label>
+        <label class="sheet-Calling sheet-anger">
+            <input type="checkbox" name="attr_Calling6anger" value="Trained" class="sheet-CallingAnger"><span class="sheet-checkmark sheet-anger"></span>
+        </label></p>
+        <p>
+        <label class="sheet-Calling sheet-active">
+            <input type="checkbox" class="sheet-active" name="attr_Calling7Active" value="Yes"><span class="sheet-checkmark sheet-active"></span>
+        </label>
+        <select name="attr_Calling7" class="sheet-CallingList">
+            <option value=""></option>
+            <option value="Adventurer">Adventurer</option>
+            <option value="Artist">Artist</option>
+            <option value="Bard">Bard</option>
+            <option value="Cook">Cook</option>
+            <option value="Courtier">Courtier</option>
+            <option value="Cybertooth">Cybertooth</option>
+            <option value="Daredevil">Daredevil</option>
+            <option value="Frostpaw">Frostpaw</option>
+            <option value="Machinist">Machinist</option>
+            <option value="Sorcerer">Sorcerer</option>
+            <option value="Tactician">Tactician</option>
+            <option value="Witch">Witch</option>
+        </select> 
+        <label class="sheet-Calling sheet-joy">
+            <input type="checkbox" name="attr_Calling7joy" value="Trained" class="sheet-CallingJoy"><span class="sheet-checkmark sheet-joy"></span>
+        </label>
+        <label class="sheet-Calling sheet-love">
+            <input type="checkbox" name="attr_Calling7love" value="Trained" class="sheet-CallingLove"><span class="sheet-checkmark sheet-love"></span>
+        </label>
+        <label class="sheet-Calling sheet-grief">
+            <input type="checkbox" name="attr_Calling7grief" value="Trained" class="sheet-CallingGrief"><span class="sheet-checkmark sheet-grief"></span>
+        </label>
+        <label class="sheet-Calling sheet-fear">
+            <input type="checkbox" name="attr_Calling7fear" value="Trained" class="sheet-CallingFear"><span class="sheet-checkmark sheet-fear"></span>
+        </label>
+        <label class="sheet-Calling sheet-anger">
+            <input type="checkbox" name="attr_Calling7anger" value="Trained" class="sheet-CallingAnger"><span class="sheet-checkmark sheet-anger"></span>
+        </label></p>
+    </div>
+</div>
