@@ -14,24 +14,33 @@
     border-radius: 10px;
     padding: 10px 15px;
 }
+.sheet-CallingDetail div div {
+    padding: 10px 15px;
+    padding-right: 20%;
+    border: 5px solid;
+    border-radius: 10px;
+    width: 60%;
+    margin-bottom: 5px;
+    margin-left: 5%;
+}
 .sheet-joy {
-    border-color: #FBD676;
+    border-color: #FBD676 !important;
     background: #FCE9B7 url(https://i.imgur.com/UAdHPJx.png) no-repeat 90% 50%;
 }
 .sheet-love {
-    border-color: #ACD59D;
+    border-color: #ACD59D !important;
     background: #D3E8CB url(https://i.imgur.com/BL0Ft7i.png) no-repeat 90% 50%;
 }
 .sheet-grief {
-    border-color: #97C5E9;
+    border-color: #97C5E9 !important;
     background: #C9E0F3 url(https://i.imgur.com/EM0MOLn.png) no-repeat 90% 50%;
 }
 .sheet-fear {
-    border-color: #A697C7;
+    border-color: #A697C7 !important;
     background: #CDC6E0 url(https://i.imgur.com/AudRc9v.png) no-repeat 90% 50%;
 }
 .sheet-anger {
-    border-color: #ED7A82;
+    border-color: #ED7A82 !important;
     background: #F6B9B8 url(https://i.imgur.com/rc1qs05.png) no-repeat 90% 50%;
 }
 
@@ -122,4 +131,8 @@ input:checked ~ .sheet-checkmark:after {
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
+}
+
+.sheet-CallingDetail {
+    display:none;
 }
